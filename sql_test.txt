@@ -1,0 +1,79 @@
+
+--------------------------------------------------
+PART 1: CREATE DATABASE AND TABLE
+--------------------------------------------------
+
+CREATE DATABASE college;
+
+USE college;
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    city VARCHAR(30),
+    age INT,
+    course VARCHAR(30),
+    marks INT,
+    fees INT,
+    gender VARCHAR(10)
+);
+
+--------------------------------------------------
+PART 2: INSERT DATA
+--------------------------------------------------
+
+INSERT INTO students
+(student_id, name, city, age, course, marks, fees, gender)
+VALUES
+(1, 'Amit', 'Pune', 21, 'Python', 78, 15000, 'Male'),
+(2, 'Priya', 'Mumbai', 22, 'SQL', 85, 12000, 'Female'),
+(3, 'Rahul', 'Pune', 20, 'Python', 92, 15000, 'Male'),
+(4, 'Sneha', 'Nashik', 21, 'SQL', 67, 12000, 'Female'),
+(5, 'Vikas', 'Mumbai', 23, 'AWS', 88, 20000, 'Male'),
+(6, 'Neha', 'Pune', 22, 'AWS', 76, 20000, 'Female'),
+(7, 'Akash', 'Aurangabad', 21, 'Python', 65, 15000, 'Male'),
+(8, 'Pooja', 'Nashik', 20, 'SQL', 91, 12000, 'Female'),
+(9, 'Rohit', 'Mumbai', 24, 'AWS', 72, 20000, 'Male'),
+(10, 'Kiran', 'Pune', 22, 'SQL', 80, 12000, 'Female');
+
+--------------------------------------------------
+PART 3: SQL QUESTIONS
+--------------------------------------------------
+
+Q1. Display the name, course, and marks of all students who scored more than 75 marks.
+
+Q2. Display all students who are from Pune or Mumbai and sort the result by marks in descending order.
+
+Q3. Find the total number of students using an aggregate function.
+
+Q4. Find the average marks of all students.
+
+Q5. Find the highest and lowest marks obtained by students.
+
+Q6. Find the total fees collected from all students.
+
+Q7. Display the number of students in each course.
+
+Q8. Find the average marks for each course and display only those courses whose average marks are greater than 75.
+
+--------------------------------------------------
+TRICKY QUESTIONS
+--------------------------------------------------
+
+Q9. Find the students whose marks are between 70 and 85, but do not include students who scored exactly 70 or 85.
+
+Q10. Find the second-highest marks from the students table without using advanced SQL concepts.
+
+Q11. Display the top 3 students based on marks.
+
+--------------------------------------------------
+CONSTRAINT QUESTION
+--------------------------------------------------
+
+Q12. The students table has a PRIMARY KEY constraint on student_id and a NOT NULL constraint on name.
+
+Write SQL statements to demonstrate what happens when you try to:
+
+a) Insert another student with an existing student_id.
+
+b) Insert a student without providing a name.
